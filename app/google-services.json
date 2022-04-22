@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "363791815154",
+    "project_id": "nasrealtors-2332b",
+    "storage_bucket": "nasrealtors-2332b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363791815154:android:0f69daa16c13015ab99b6b",
+        "android_client_info": {
+          "package_name": "com.example.mangement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363791815154-iqmk8lggc8uamnh68u42sna9k69houbr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHh4KDfPVKgwCOReTp0us4WMN4LTQCL8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363791815154-iqmk8lggc8uamnh68u42sna9k69houbr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

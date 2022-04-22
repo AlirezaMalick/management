@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="text">#6d7893</color>
+    <color name="textWhite">#FFFFFF</color>
+    <color name="textBlack">#000000</color>
+    <color name="textColor">#6d7893</color>
+    <color name="colorPrimary">#96B7EA</color>
+    <color name="blue_200">#e5effe</color>
+    <color name="text_golden">#FFC107</color>
+
+
+    <!--header-->
+    <color name="blue_purple">#5302fe</color>
+    <color name="tooltext">#FFFFFF</color>
+    <color name="bottom_icon_color">#00d099</color>
+    <color name="bottomBarUnSelectedColor">#a6a6a6</color>
+    <color name="colordelete">#FAE9E7</color>
+    <color name="colorDeleteText">#E25140</color>
+    <color name="mainViewBackground">#F0F2F5</color>
+    <color name="userProfileImageCardViewColor">#f4f6f8</color>
+
+
+
+
+</resources>

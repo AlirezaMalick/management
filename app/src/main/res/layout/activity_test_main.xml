@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.mangement.ui.activity.dashboard.MainActivityViewModel" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layoutAnimation="@anim/layout_animation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/cl_appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.appbar.AppBarLayout
+                        android:id="@+id/appBar"
+                        android:background="@color/colorPrimary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.example.mangement.ui.navdrawer.customView.CustomHeader
+                            android:id="@+id/header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </com.google.android.material.appbar.AppBarLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+               <!-- <androidx.constraintlayout.widget.ConstraintLayout
+                    android:visibility="visible"
+                    android:background="@drawable/bg_gradient"
+                    app:layout_constraintTop_toBottomOf="@id/cl_appbar"
+                    android:id="@+id/textLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textSize="14sp"
+                        android:visibility="visible"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/tv_welcome"
+                        android:text="Welcome Ahsan Imam Malik"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textColor="@color/tooltext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_details"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:visibility="visible"
+                        app:layout_constraintTop_toBottomOf="@id/tv_welcome"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/proxima_nova_bold"
+                        android:text="@string/explore_ideas_amp_incidents_shared_by_people"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/tooltext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+                <FrameLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cl_appbar"
+                    app:layout_constraintBottom_toTopOf="@id/bottomNavigationView" />
+
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottomNavigationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="15dp"
+                    android:fitsSystemWindows="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:visibility="visible"
+                    app:elevation="10dp"
+                    app:itemBackground="?android:attr/colorBackground"
+                    app:itemIconSize="16dp"
+                    app:itemIconTint="@color/bottom_icon_color"
+                    app:itemRippleColor="@color/bottomBarUnSelectedColor"
+                    app:itemTextAppearanceInactive="@style/BottomNavigation.InActiveItemTextAppearance"
+                    app:itemTextAppearanceActive="@style/BottomNavigation.ActiveItemTextAppearance"
+                    app:itemTextColor="@color/bottom_navigation_text_selector"
+                    app:labelVisibilityMode="labeled"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:menu="@menu/bottom_home_nav_menu" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <!--        <fragment-->
+        <!--            android:id="@+id/fragment_navigation_drawer"-->
+        <!--            android:name="com.target.app.estidama.customviews.navdrawer.DrawerFragment"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_gravity="start"-->
+        <!--            app:layout="@layout/fragment_drawer"-->
+        <!--            tools:layout="@layout/fragment_drawer"-->
+        <!--            android:layout_marginStart="-64dp"/>-->
+        <include
+            android:id="@+id/includedlayout"
+            android:layout_width="230dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            layout="@layout/idea_drawer"
+            />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

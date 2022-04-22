@@ -1,0 +1,23 @@
+<resources>
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+    </style>
+
+    <style name="BottomNavigationTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">?colorPrimary</item>
+        <item name="android:textColorSecondary">?titleTextColor</item>
+    </style>
+
+    <style name="BottomNavigation.ActiveItemTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+    </style>
+
+    <style name="BottomNavigation.InActiveItemTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">11sp</item>
+    </style>
+</resources>

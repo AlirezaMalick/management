@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.mangement.ui.navdrawer.customView.navdrawer.DrawerAdapterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:onClick="@{()->viewModel.onItemClick()}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:padding="7dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDrawerIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_placeholder"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/tvDrawer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textColor="@color/textBlack"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivDrawerIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivDrawerIcon"
+            app:layout_constraintTop_toTopOf="@+id/ivDrawerIcon"
+            tools:text="@{viewModel.drawerItem.title}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
